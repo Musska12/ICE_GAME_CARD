@@ -40,25 +40,28 @@ public class CardTrick {
         }
         
         // asking the user for input 
-        System.out.print("Enter a card value (1-13): ");
+//        System.out.print("Enter a card value (1-13): ");
+//        
+//        int val = input.nextInt();
+//        
+//        System.out.print("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades:) ");
+//        
+//        int suitIndex = input.nextInt();
+//        
+//        
+//        Card theUserCard = new Card();
+//        
+//        theUserCard.setValue(val);
+//        theUserCard.setSuit(Card.SUITS[suitIndex]);
         
-        int val = input.nextInt();
-        
-        System.out.print("Enter a suit (0-3 where 0=Hearts, 1=Diamonds, 2=Clubs, 3=Spades:) ");
-        
-        int suitIndex = input.nextInt();
-        
-        
-        Card theUserCard = new Card();
-        
-        theUserCard.setValue(val);
-        theUserCard.setSuit(Card.SUITS[suitIndex]);
-        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
         
         boolean found = false;
         for (Card c : magicHand){
-            if (c.getValue() == theUserCard.getValue() &&
-                c.getSuit().equals(theUserCard.getSuit())){
+            if (c.getValue() == luckyCard.getValue() &&
+                c.getSuit().equals(luckyCard.getSuit())){
                 found = true;
         
             }
@@ -74,12 +77,10 @@ public class CardTrick {
         
         }
 
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit("Clubs");
+//        
 
-        if (theUserCard.getValue() == luckyCard.getValue() && 
-           theUserCard.getSuit().equals(LuckyCard.getSuit())) {
+        if (luckyCard.getValue() == luckyCard.getValue() && 
+           luckyCard.getSuit().equals(luckyCard.getSuit())) {
             System.out.println("You found the lucky card!");
            }
     
