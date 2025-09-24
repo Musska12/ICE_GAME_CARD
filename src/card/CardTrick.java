@@ -73,7 +73,16 @@ public class CardTrick {
             System.out.println("Sorry, your card is not in the magic hand.");
         
         }
-        
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
+
+        if (theUserCard.getValue() == luckyCard.getValue() && 
+           theUserCard.getSuit().equals(LuckyCard.getSuit())) {
+            System.out.println("You founf the lucky card!");
+           }
+    
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
