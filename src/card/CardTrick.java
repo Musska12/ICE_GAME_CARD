@@ -80,7 +80,7 @@ public class CardTrick {
 
         if (theUserCard.getValue() == luckyCard.getValue() && 
            theUserCard.getSuit().equals(LuckyCard.getSuit())) {
-            System.out.println("You founf the lucky card!");
+            System.out.println("You found the lucky card!");
            }
     
         //insert code to ask the user for Card value and suit, create their card
